@@ -1,40 +1,16 @@
 name: Metrics embed
 on:
-  schedule: [{cron: "0 * * * *"}]
+  schedule: [{cron: "0 * * * *"}]  # Runs hourly
   push: {branches: ["main"]}
-  workflow_dispatch:
+  workflow_dispatch:              # Allows manual run from GitHub
 
 jobs:
-  metrics:
+  github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - name: General Stats
+      - name: Generate GitHub Metrics
         uses: lowlighter/metrics@v3.34
         with:
+          token: ${{ secrets.METRICS_TOKEN }}
           filename: github-metrics.svg
-          token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, metadata
-
-      - name: Languages
-        uses: lowlighter/metrics@v3.34
-        with:
-          filename: github-metrics.languages.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_languages: yes
-
-      - name: Achievements
-        uses: lowlighter/metrics@v3.34
-        with:
-          filename: github-metrics.achievements.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-
-      - name: Repositories
-        uses: lowlighter/metrics@v3.34
-        with:
-          filename: github-metrics.repositories.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: repositories
