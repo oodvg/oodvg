@@ -22,4 +22,6 @@ Welcome to my GitHub profile — I'm **oodvg**, and I’m passionate about weath
 
 <br clear="all" />
 
+----------
+
 <sub>Generated using [lowlighter/metrics](https://github.com/lowlighter/metrics) ⚙️</sub>
