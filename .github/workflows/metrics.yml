@@ -17,8 +17,11 @@ jobs:
           committer_gist: ${{ secrets.GIST }}
           base: header
           base_indepth: yes
-          config_order: base.header, isocalendar, notable, projects, stargazers
+          config_order: base.header, isocalendar, languages, activity, notable, projects
           plugin_isocalendar: yes
           plugin_projects: yes
-          plugin_stargazers: yes
           plugin_notable: yes
+          plugin_languages: yes
+          plugin_languages_ignored: html
+          plugin_languages_skipped: lowlighter/metrics
+          plugin_activity: yes
