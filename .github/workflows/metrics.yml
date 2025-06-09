@@ -1,16 +1,24 @@
-name: Metrics embed
+name: Metrics
 on:
-  schedule: [{cron: "0 * * * *"}]  # Runs hourly
-  push: {branches: ["main"]}
-  workflow_dispatch:              # Allows manual run from GitHub
+  schedule:
+    - cron: "0 16 * * *"   # daily at 16:00 UTC
+  workflow_dispatch:
 
 jobs:
-  github-metrics:
+  metrics:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate GitHub Metrics
-        uses: lowlighter/metrics@v3.34
+      - name: Generate Metrics SVG
+        uses: lowlighter/metrics@latest
         with:
+          filename: general.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          filename: github-metrics.svg
-          base: header, activity, community, metadata
+          output_action: gist
+          committer_gist: ${{ secrets.GIST }}
+          base: header
+          base_indepth: yes
+          config_order: base.header, isocalendar, notable, projects, stargazers
+          plugin_isocalendar: yes
+          plugin_projects: yes
+          plugin_stargazers: yes
+          plugin_notable: yes
