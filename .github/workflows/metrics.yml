@@ -1,7 +1,7 @@
 name: Metrics
 on:
   schedule:
-    - cron: "0 16 * * *"   # daily at 16:00 UTC
+    - cron: "0 */3 * * *"   # daily at 16:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -13,8 +13,7 @@ jobs:
         with:
           filename: general.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          output_action: gist
-          committer_gist: ${{ secrets.GIST }}
+          output_action: commit
           base: header
           base_indepth: yes
           config_order: base.header, isocalendar, notable, projects, stargazers
