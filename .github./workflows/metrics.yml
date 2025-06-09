@@ -1,2 +1,40 @@
-- name: Metrics embed
-  uses: lowlighter/metrics@v3.34
+name: Metrics embed
+on:
+  schedule: [{cron: "0 * * * *"}]
+  push: {branches: ["main"]}
+  workflow_dispatch:
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: General Stats
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: github-metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: header, activity, community, metadata
+
+      - name: Languages
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: github-metrics.languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_languages: yes
+
+      - name: Achievements
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: github-metrics.achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+
+      - name: Repositories
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: github-metrics.repositories.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: repositories
