@@ -12,15 +12,7 @@ Welcome to my GitHub profile — I'm **oodvg**, and I’m passionate about weath
 
 ## 📊 GitHub Stats & Activity
 
-[<img align="left" width="390" alt="Metrics General" src="https://raw.githubusercontent.com/oodvg/oodvg/main/github-metrics.svg">](#)
-[<img align="right" width="390" alt="Metrics Languages" src="https://raw.githubusercontent.com/oodvg/oodvg/main/github-metrics.languages.svg">](#)
-
-<br/>
-
-[<img align="left" width="390" alt="Metrics Achievements" src="https://raw.githubusercontent.com/oodvg/oodvg/main/github-metrics.achievements.svg">](#)
-[<img align="right" width="390" alt="Metrics Repositories" src="https://raw.githubusercontent.com/oodvg/oodvg/main/github-metrics.repositories.svg">](#)
-
-<br clear="all" />
+![Metrics](https://gist.githubusercontent.com/oodvg/efcef232af2991f85b745bcbd390f41b/raw/general.svg)
 
 ----------
 
