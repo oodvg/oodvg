@@ -10,3 +10,16 @@ Welcome to my GitHub profile — I'm **oodvg**, and I’m passionate about weath
 - 📫 Reach me on **Discord**: `@oodvg`
 - 😄 Pronouns: **he/him**
 
+## 📊 GitHub Stats & Activity
+
+[<img align="left" width="390" alt="Metrics General" src="https://raw.githubusercontent.com/oodvg/oodvg/main/github-metrics.svg">](#)
+[<img align="right" width="390" alt="Metrics Languages" src="https://raw.githubusercontent.com/oodvg/oodvg/main/github-metrics.languages.svg">](#)
+
+<br/>
+
+[<img align="left" width="390" alt="Metrics Achievements" src="https://raw.githubusercontent.com/oodvg/oodvg/main/github-metrics.achievements.svg">](#)
+[<img align="right" width="390" alt="Metrics Repositories" src="https://raw.githubusercontent.com/oodvg/oodvg/main/github-metrics.repositories.svg">](#)
+
+<br clear="all" />
+
+<sub>Generated using [lowlighter/metrics](https://github.com/lowlighter/metrics) ⚙️</sub>
